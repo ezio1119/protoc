@@ -11,7 +11,7 @@ RUN go get -d github.com/envoyproxy/protoc-gen-validate && \
 RUN go get github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 
 FROM alpine
-WORKDIR /work
+WORKDIR /proto
 
 RUN apk add --no-cache protobuf-dev
 COPY --from=go-builder /go/bin /usr/local/bin
