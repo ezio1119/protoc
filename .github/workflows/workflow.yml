@@ -1,9 +1,8 @@
 name: Build and Publish to DockerHub
 
 on:
-  push:
-    branches:
-    - master
+  schedule:
+    - cron:  '0 9 * * *'
 
 env:
   DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
